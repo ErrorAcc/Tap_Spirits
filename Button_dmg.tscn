@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Button.gd" type="Script" id=1]
+
+[node name="Button_dmg" type="Button"]
+modulate = Color( 0.513726, 0.933333, 0.0117647, 1 )
+anchor_left = -0.048
+anchor_top = -0.054
+anchor_right = 1.079
+anchor_bottom = 0.456
+margin_left = -3.41342
+margin_top = -3.57348
+margin_right = -3.57336
+margin_bottom = -3.77356
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="." to="." method="_on_Button_dmg_pressed"]
