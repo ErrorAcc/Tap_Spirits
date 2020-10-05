@@ -10,6 +10,7 @@ signal change_frame
 func _ready():
 	set_position(Vector2(540,440))
 	healthbar.connect("zerolife", self, "on_Health_zerolife")
+	#healthbar.connect("zerolife", self, "on_Health_zerolife")
 	pass 
 
 func _enemy_died():
