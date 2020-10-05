@@ -3,7 +3,8 @@ extends Node
 export(int) var max_amount = 10 setget set_max
 
 var schaden = 1
-var ememy_count = 0
+export var ememy_count = 0
+export var lvl_count = 0
 
 onready var current = max_amount setget set_current
 
@@ -42,7 +43,8 @@ func initialize():
 		emit_signal("zerolife")
 		print("dead")
 		ememy_count += 1
-		print(ememy_count)
+		lvl_count += 1
+		#print(ememy_count)
 		if ememy_count == 5:
 			ememy_count = 0
 			max_amount = max_amount * 1.4
