@@ -1,5 +1,6 @@
 extends StaticBody2D
 
+export var enemy_counter = 0
 onready var healthbar = utils.get_main_node().get_node("HealthBarTest")
 var life = 10
 
@@ -13,6 +14,7 @@ func _ready():
 	pass 
 
 func _enemy_died():
+	enemy_counter += 1
 	emit_signal("change_frame")
 	print("löschen")
 	pass
@@ -22,6 +24,5 @@ func _enemy_died():
 
 
 func _on_Health_zerolife():
-	print("0hp")
 	_enemy_died()
 	pass 
