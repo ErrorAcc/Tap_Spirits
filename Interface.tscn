@@ -17,10 +17,6 @@ margin_top = 9.0
 margin_right = 141.0
 margin_bottom = 74.0
 rect_scale = Vector2( 5, 5 )
-text = "lllllllllllllllllllllllllllll
-lllllllllllllllll
-lllllllllllllll
-llllllllllllllllllll"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -31,7 +27,6 @@ margin_top = 51.0
 margin_right = 861.0
 margin_bottom = 115.0
 rect_scale = Vector2( 4, 4 )
-text = "sssssssssssssssffffffffffff"
 __meta__ = {
 "_edit_use_anchors_": false
 }
