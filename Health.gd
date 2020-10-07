@@ -2,13 +2,14 @@ extends Node
 
 export(int) var max_amount = 10 setget set_max
 
-var schaden = 1
+export var schaden = 1
 export var ememy_count = 0
 export var lvl_count = 0
 
 onready var current = max_amount setget set_current
 
 onready var upgrades = utils.get_main_node().get_node("Upgrades")
+onready var spirit_water = utils.get_main_node().get_node("Spirit_Water")
 
 signal max_changed(new_max)
 signal changed(new_amount)
@@ -18,9 +19,8 @@ signal zerolife
 
 func _ready():
 	upgrades.connect("dmgUg", self, "dmgUg")
+	spirit_water.connect("dmg_w", self, "dmg_w")
 	initialize()
-	if current == 1:
-		print("dead")
 	pass
 
 func set_max(new_max):
@@ -41,7 +41,6 @@ func initialize():
 	emit_signal("changed", current)
 	if current <= 1:
 		emit_signal("zerolife")
-		print("dead")
 		ememy_count += 1
 		lvl_count += 1
 		#print(ememy_count)
@@ -67,3 +66,14 @@ func dmgUg():
 	schaden += 1
 	print("more dmg")
 	pass
+
+
+
+#####Spirits####
+
+###Water##
+func dmg_w():
+	current -= spirit_water.dmg_water
+	initialize()
+	pass
+#########
