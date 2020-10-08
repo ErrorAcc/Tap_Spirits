@@ -9,6 +9,8 @@ onready var upgrades = utils.get_main_node().get_node("Upgrades")
 
 func _ready():
 	upgrades.connect("dmgUg", self, "_dmg_per_click")
+	upgrades.connect("critdamage", self, "_crit_dmg")
+	upgrades.connect("critchance", self, "_crit_chance")
 	gegner.connect("change_frame",self,"get_coins")
 	get_node("Coin_Counter").set_text(str(Gamee.coinscore))
 	get_node("Lvl_Counter").set_text(str(Gamee.lvlscore))
@@ -24,6 +26,13 @@ func get_coins():
 	pass
 
 func _dmg_per_click():
-	print(health.schaden)
 	get_node("dmg_click").set_text(str(health.schaden))
+	pass
+
+func _crit_dmg():
+	get_node("crit_dmg").set_text(str(upgrades.crit_damge))
+	pass
+
+func _crit_chance():
+	get_node("crit_chance").set_text(str(upgrades.crit_chance))
 	pass
