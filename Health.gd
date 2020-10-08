@@ -1,7 +1,10 @@
 extends Node
 
 export(int) var max_amount = 10 setget set_max
+var random = 0
+var crit_hit = false
 
+export(int) var max_amount = 10 setget set_max
 export var schaden = 1
 export var ememy_count = 0
 export var lvl_count = 0
@@ -55,8 +58,19 @@ func initialize():
 
 
 func _on_dmg_Button_pressed():
+	randomize_crit()
 	current -= schaden
+	if crit_hit == true:
+		schaden = schaden / upgrades.crit_damge
+		crit_hit = false
 	initialize()
+	pass
+
+func randomize_crit():
+	random = randi()%100 + 1
+	if random <= upgrades.crit_chance:
+		schaden = schaden * upgrades.crit_damge
+		crit_hit = true
 	pass
 
 
