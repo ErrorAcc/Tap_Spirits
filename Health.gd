@@ -1,6 +1,5 @@
 extends Node
 
-export(int) var max_amount = 10 setget set_max
 var random = 0
 var crit_hit = false
 
@@ -10,7 +9,6 @@ export var ememy_count = 0
 export var lvl_count = 0
 
 onready var current = max_amount setget set_current
-
 onready var upgrades = utils.get_main_node().get_node("Upgrades")
 onready var spirit_water = utils.get_main_node().get_node("Spirit_Water")
 
@@ -46,7 +44,6 @@ func initialize():
 		emit_signal("zerolife")
 		ememy_count += 1
 		lvl_count += 1
-		#print(ememy_count)
 		if ememy_count == 5:
 			ememy_count = 0
 			max_amount = max_amount * 1.4
