@@ -1,7 +1,7 @@
 extends Node
 
 
-var coins = 0
+
 
 onready var health = utils.get_main_node().get_node("HealthBarTest").get_node("Health")
 onready var gegner = utils.get_main_node().get_node("HealthBarTest").get_node("Health").get_node("Gegner")
@@ -18,11 +18,10 @@ func _ready():
 
 func get_coins():
 
-	Gamee.lvlscore += 1
+	##Gamee.lvlscore += 1
 	Gamee.coinscore += 1
 	get_node("Coin_Counter").set_text(str(Gamee.coinscore))
-	
-	get_node("Lvl_Counter").set_text(str(Gamee.lvlscore))
+	##get_node("Lvl_Counter").set_text(str(Gamee.lvlscore))
 	pass
 
 func _dmg_per_click():
