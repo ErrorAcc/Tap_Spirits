@@ -15,8 +15,8 @@ texture = ExtResource( 1 )
 [node name="Coin_Counter" type="Label" parent="."]
 margin_left = 25.0
 margin_top = 9.0
-margin_right = 141.0
-margin_bottom = 74.0
+margin_right = 95.0
+margin_bottom = 37.0
 rect_scale = Vector2( 5, 5 )
 text = "0"
 __meta__ = {
@@ -35,10 +35,10 @@ __meta__ = {
 }
 
 [node name="dmg_click" type="Label" parent="."]
-margin_left = 380.362
-margin_top = 1160.49
-margin_right = 641.362
-margin_bottom = 1245.49
+margin_left = 372.27
+margin_top = 1171.89
+margin_right = 417.27
+margin_bottom = 1185.89
 rect_scale = Vector2( 3, 3 )
 text = "aaa"
 uppercase = true
@@ -47,24 +47,94 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="dmg_click_cost" type="Label" parent="."]
+margin_left = 793.238
+margin_top = 1142.63
+margin_right = 838.238
+margin_bottom = 1156.63
+rect_scale = Vector2( 3, 3 )
+text = "aaa"
+uppercase = true
+max_lines_visible = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dmg_click_lvl" type="Label" parent="."]
+margin_left = 196.361
+margin_top = 1131.22
+margin_right = 241.361
+margin_bottom = 1145.22
+rect_scale = Vector2( 2, 2 )
+text = "aaa"
+uppercase = true
+max_lines_visible = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="crit_chance" type="Label" parent="."]
+margin_left = 380.1
+margin_top = 1323.81
+margin_right = 434.1
+margin_bottom = 1337.81
+rect_scale = Vector2( 3, 3 )
+text = "vvvv"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="crit_chance_cost" type="Label" parent="."]
+margin_left = 790.1
+margin_top = 1294.81
+margin_right = 844.1
+margin_bottom = 1308.81
+rect_scale = Vector2( 3, 3 )
+text = "vvvv"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="crit_chancelvl" type="Label" parent="."]
+margin_left = 195.455
+margin_top = 1286.77
+margin_right = 249.455
+margin_bottom = 1300.77
+rect_scale = Vector2( 2, 2 )
+text = "vvvv"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="crit_dmg" type="Label" parent="."]
-margin_left = 383.954
-margin_top = 1465.88
-margin_right = 450.954
-margin_bottom = 1492.88
+margin_left = 335.228
+margin_top = 1482.4
+margin_right = 401.228
+margin_bottom = 1496.4
 rect_scale = Vector2( 3, 3 )
 text = "bbb"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="crit_chance" type="Label" parent="."]
-margin_left = 384.879
-margin_top = 1310.33
-margin_right = 482.879
-margin_bottom = 1355.33
+[node name="crit_dmg_cost" type="Label" parent="."]
+margin_left = 792.063
+margin_top = 1453.14
+margin_right = 858.063
+margin_bottom = 1467.14
 rect_scale = Vector2( 3, 3 )
-text = "vvvv"
+text = "bbb"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="crit_dmglvl" type="Label" parent="."]
+margin_left = 194.911
+margin_top = 1440.97
+margin_right = 260.911
+margin_bottom = 1454.97
+rect_scale = Vector2( 2, 2 )
+text = "bbb"
 __meta__ = {
 "_edit_use_anchors_": false
 }
