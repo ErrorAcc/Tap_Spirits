@@ -12,16 +12,22 @@ func _ready():
 	upgrades.connect("critdamage", self, "_crit_dmg")
 	upgrades.connect("critchance", self, "_crit_chance")
 	gegner.connect("change_frame",self,"get_coins")
+	
 	get_node("Coin_Counter").set_text(str(Gamee.coinscore))
 	get_node("Lvl_Counter").set_text(str(Gamee.lvlscore))
+	get_node("dmg_click").set_text(str(health.schaden))
+	get_node("crit_dmg").set_text(str(upgrades.crit_damge))
+	get_node("crit_chance").set_text(str(upgrades.crit_chance))
+	get_node("dmg_click_cost").set_text(str(upgrades.dmg_cost))
+	get_node("crit_chance_cost").set_text(str(upgrades.crit_chance_cost))
+	get_node("crit_dmg_cost").set_text(str(upgrades.crit_dmg_cost))
 	pass 
 
 func get_coins():
-
-	##Gamee.lvlscore += 1
+	Gamee.lvlscore += 1
 	Gamee.coinscore += 1
 	get_node("Coin_Counter").set_text(str(Gamee.coinscore))
-	##get_node("Lvl_Counter").set_text(str(Gamee.lvlscore))
+	get_node("Lvl_Counter").set_text(str(Gamee.lvlscore))
 	pass
 
 func _dmg_per_click():
