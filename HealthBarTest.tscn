@@ -14,9 +14,9 @@ anchor_top = 0.407
 anchor_right = 0.637
 anchor_bottom = 0.413
 margin_left = -0.0437317
-margin_top = -0.928894
+margin_top = -680.929
 margin_right = 0.476257
-margin_bottom = 11.5511
+margin_bottom = -668.449
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 
 [node name="dmg_Button" type="Button" parent="."]
