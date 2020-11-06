@@ -38,6 +38,26 @@ margin_bottom = 1549.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="reset" type="Button" parent="."]
+margin_left = 648.0
+margin_top = 1680.0
+margin_right = 1078.0
+margin_bottom = 1899.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gold" type="Button" parent="."]
+margin_left = 19.0
+margin_top = 1689.0
+margin_right = 494.0
+margin_bottom = 1919.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="DamageButton" to="." method="_on_DamageButton_pressed"]
 [connection signal="pressed" from="Crit_Chance" to="." method="_on_Crit_Chance_pressed"]
 [connection signal="pressed" from="Crit_Damage" to="." method="_on_Crit_Damage_pressed"]
+[connection signal="pressed" from="reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="Gold" to="." method="_on_Gold_pressed"]
